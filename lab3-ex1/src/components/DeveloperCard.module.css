@@ -1,0 +1,158 @@
+
+.card {
+  --accent: #6c63ff;
+  --text: #24243a;
+  --muted: #73738a;
+  --surface: #ffffff;
+  --border: #e8e8f1;
+
+  width: 100%;
+  max-width: 560px;
+  box-sizing: border-box;
+  margin: 24px auto;
+  padding: 24px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgb(35 35 70 / 8%);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.card *,
+.card *::before,
+.card *::after {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+  display: block;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #eeeeff;
+}
+
+.identity {
+  min-width: 0;
+}
+
+.identity h2 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.identity p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.metricsSection,
+.skillsSection {
+  padding-top: 22px;
+}
+
+.metricsSection h3,
+.skillsSection h3 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  margin: 0;
+  padding: 16px;
+  background: #f7f7ff;
+  border-radius: 14px;
+}
+
+.metrics dt {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.metrics dd {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+  text-align: right;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 375px) {
+  .card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+    border-radius: 14px;
+  }
+
+  .identity h2 {
+    font-size: 1.05rem;
+  }
+
+  .identity p {
+    font-size: 0.8rem;
+  }
+
+  .metrics {
+    padding: 12px;
+    gap: 10px;
+    font-size: 0.875rem;
+  }
+}
+
+.skillBadge {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #f0efff;
+  border: 1px solid #e1dfff;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.skillName {
+  font-weight: 600;
+}
+
+.skillLevel {
+  color: var(--accent);
+  font-size: 0.75rem;
+}
